@@ -33,7 +33,7 @@ mkdir --parents ${RPM_BUILD_ROOT}/usr/lib/systemd/system
 cp shinyalarm.service ${RPM_BUILD_ROOT}/usr/lib/systemd/system
 cp shinyalarm.timer ${RPM_BUILD_ROOT}/usr/lib/systemd/system
 
-%postinstall
+%post
 git -C /srv/rpm/shinyalarm pull
 
 %clean
